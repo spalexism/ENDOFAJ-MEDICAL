@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ENDOFAJ Medical | Mobiliario, equipo y consumibles médicos</title>
+<meta name="description" content="ENDOFAJ Medical S.A. de C.V. Fabricantes de carros porta equipo, pedestales y soportes para monitor. SAANAMED es parte de la casa.">
+<style>
+  :root{--navy:#0b2a5b;--blue:#0a7fc2;--wa:#1fa855;--ink:#1c2430;--muted:#5d6673;--line:#d9dde3;--soft:#f3f5f7}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:96px}
+  body{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6;font-size:16px}
+  img{max-width:100%;height:auto;display:block}
+  a{color:var(--blue)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{line-height:1.2;color:var(--navy)}
+  h2{font-size:1.7rem;font-weight:700;padding-bottom:10px;border-bottom:3px solid var(--blue);display:inline-block;margin-bottom:18px}
+  section{padding:54px 0}
+  p+p{margin-top:12px}
+
+  .btn{display:inline-block;padding:11px 20px;border-radius:4px;font-weight:600;text-decoration:none;font-size:.98rem;border:1px solid transparent;cursor:pointer}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{background:#178a45}
+  .btn-line{border-color:var(--navy);color:var(--navy);background:#fff}
+  .btn-line:hover{background:var(--soft)}
+
+  .topbar{background:var(--navy);color:#fff;font-size:.88rem;padding:7px 0}
+  .topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between}
+  .topbar a{color:#fff;text-decoration:none}
+  .topbar a:hover{text-decoration:underline}
+
+  header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:84px}
+  .nav img{height:68px;width:auto}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.97rem;padding:6px 0;border-bottom:2px solid transparent}
+  nav a:hover{border-color:var(--blue);color:var(--navy)}
+  @media(max-width:820px){
+    html{scroll-padding-top:120px}
+    .topbar span:first-child{display:none}
+    .nav{flex-wrap:wrap;height:auto;padding-top:8px;gap:0 16px}
+    .nav img{height:54px}
+    .nav nav{order:3;width:100%;border-top:1px solid var(--line);margin-top:8px}
+    nav ul{justify-content:space-between;gap:10px}
+    nav a{display:block;font-size:.9rem;padding:10px 0 8px}
+    .nav .btn{padding:9px 16px}
+    section{padding:40px 0}
+    .hero{padding:32px 0}
+    a.fab{right:0;left:0;bottom:0;width:auto;height:52px;border-radius:0;display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;font-weight:600;text-decoration:none;box-shadow:0 -2px 8px rgba(0,0,0,.2)}
+    .fab::after{content:"Cotizar por WhatsApp"}
+    a.fab svg{width:24px;height:24px}
+    body{padding-bottom:52px}
+  }
+
+  .hero{background:var(--soft);border-bottom:1px solid var(--line);padding:48px 0}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700}
+  .hero p{margin:16px 0 24px;font-size:1.08rem;color:#3a4350}
+  .hero img{border:1px solid var(--line)}
+  .cta{display:flex;flex-wrap:wrap;gap:10px}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr}}
+
+  .cols{display:grid;grid-template-columns:1.2fr 1fr;gap:44px}
+  .cols ul{list-style:none;border-top:1px solid var(--line)}
+  .cols li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;font-size:.96rem}
+  .cols li b{color:var(--navy);font-weight:600}
+  .cols li span{color:var(--muted);text-align:right}
+  @media(max-width:820px){.cols{grid-template-columns:1fr;gap:24px}}
+
+  #catalogo{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .filters{display:flex;flex-wrap:wrap;gap:4px 24px;border-bottom:1px solid var(--line);margin:8px 0 26px}
+  .tab{background:none;border:0;border-bottom:3px solid transparent;padding:10px 2px;font:inherit;font-weight:600;color:var(--muted);cursor:pointer;margin-bottom:-1px}
+  .tab[aria-pressed="true"]{color:var(--navy);border-color:var(--navy)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+  .card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+  .thumb{border:0;padding:0;background:var(--navy);cursor:zoom-in;display:block;width:100%;aspect-ratio:16/9}
+  .thumb img{width:100%;height:100%;object-fit:cover}
+  .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card h3{font-size:1.12rem}
+  .card h3 small{display:block;font-size:.92rem;font-weight:400;color:var(--muted);margin-top:2px}
+  .card ul{padding-left:18px;font-size:.93rem;color:#333c48}
+  .card .specs{font-size:.88rem;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+  .card .links{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.93rem}
+  .card .links button{background:none;border:0;color:var(--blue);font:inherit;cursor:pointer;text-decoration:underline;padding:0}
+  .card .btn{padding:9px 14px;font-size:.93rem}
+  .note{margin-top:22px;color:var(--muted);font-size:.86rem}
+
+  .saana{border-left:5px solid var(--blue);padding:6px 0 6px 26px;max-width:820px}
+  .saana h2{border:0;padding:0;margin-bottom:12px}
+  .saana .btn{margin-top:18px}
+
+  #contacto{background:var(--soft);border-top:1px solid var(--line)}
+  .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:6px}
+  .person{background:#fff;border:1px solid var(--line);border-top:3px solid var(--navy);padding:20px}
+  .person h3{font-size:1.08rem}
+  .person p{font-size:.94rem;color:var(--muted);margin:2px 0 0}
+  .person .tel{color:var(--ink);font-weight:600;margin:10px 0 14px;font-size:1.02rem}
+  .datos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:.95rem}
+  .datos b{display:block;color:var(--navy);margin-bottom:4px}
+  .otras-t{margin:34px 0 10px;font-size:1.15rem}
+  .otras{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 24px;background:#fff;border:1px solid var(--line);padding:6px 18px}
+  .otras li{padding:10px 0;border-bottom:1px solid var(--soft);font-weight:600;color:var(--navy);font-size:.96rem}
+
+  footer{background:var(--navy);color:#c9d3e3;padding:26px 0;font-size:.88rem}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+  footer b{color:#fff}
+
+  .fab{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .fab svg{width:30px;height:30px;fill:#fff}
+
+  dialog{border:0;background:transparent;max-width:min(1200px,96vw);margin:auto}
+  dialog::backdrop{background:rgba(0,0,0,.85)}
+  dialog img{max-height:88vh;width:auto;margin:auto}
+  dialog button{position:fixed;top:14px;right:18px;background:#fff;border:0;width:40px;height:40px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Tel. 55 5769 7811 · 55 5714 2594 &nbsp;|&nbsp; Lunes a viernes, 9 a 18 h</span>
+    <span><a data-wa="Hola, quisiera una cotización.">WhatsApp 55 1142 44 33</a> &nbsp;|&nbsp; <a href="mailto:endofaj@hotmail.com">endofaj@hotmail.com</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio"><img src="img/logo-crop.jpg" alt="ENDOFAJ Medical S.A. de C.V." width="940" height="600"></a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#saanamed">SAANAMED</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-wa" data-wa="Hola, quisiera una cotización.">Cotizar</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Carros porta equipo, pedestales y soportes para monitor</h1>
+      <p>Somos fabricantes. Trabajamos lámina de acero al carbón calibre 18 con soldadura MIG y pintura electrostática, y adaptamos cada mueble al equipo que va a cargar.</p>
+      <div class="cta">
+        <a class="btn btn-wa" data-wa="Hola, quisiera una cotización.">Pedir cotización por WhatsApp</a>
+        <a class="btn btn-line" href="#catalogo">Ver catálogo</a>
+      </div>
+    </div>
+    <img src="img/hero.jpg" alt="Carro porta equipo con brazo para monitor" width="1280" height="985">
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="wrap">
+    <h2>Nosotros</h2>
+    <div class="cols">
+      <div>
+        <p>ENDOFAJ Medical S.A. de C.V. inició actividades el 31 de julio de 2001. Somos representantes de Karl Storz Endoscopia México y de Sony de México en el área médica, y especialistas en la fabricación de carros porta equipo.</p>
+        <p>Atendemos a clínicas y hospitales de toda la República Mexicana con mobiliario para torres de endoscopia, laparoscopia y electrocirugía: carros cerrados con puerta de acrílico, mesas, pedestales desarmables y los accesorios para montar el monitor.</p>
+        <p>Los porta tanques, cajones y entrepaños se hacen a la medida. Si tu equipo no cabe en un modelo de línea, mándanos las medidas y lo ajustamos.</p>
+      </div>
+      <ul>
+        <li><b>Material</b><span>Lámina de acero al carbón cal. 18<br>PTR 3 × 1/2" y placa de 3/8"</span></li>
+        <li><b>Ensamble</b><span>Soldadura MIG</span></li>
+        <li><b>Acabado</b><span>Pintura electrostática<br>blanco mate o almendra</span></li>
+        <li><b>Rodajas</b><span>Antiestáticas de 5", dos con freno</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="catalogo">
+  <div class="wrap">
+    <h2>Catálogo</h2>
+    <div class="filters" id="filters" role="group" aria-label="Categoría"></div>
+    <div class="grid" id="grid"></div>
+    <h3 class="otras-t">También manejamos</h3>
+    <ul class="otras">
+      <li>Monitores quirúrgicos</li><li>Cámaras y grabadores</li><li>Soportes de impresión</li>
+      <li>Película térmica</li><li>Consumibles médicos</li><li>Hojas para dermatomo</li>
+    </ul>
+    <p class="note">Pregunta por estas líneas por <a data-wa="Hola, quisiera información de equipo y consumibles.">WhatsApp</a> o al correo. Todos los precios y características en esta lista pueden cambiar sin previo aviso.</p>
+  </div>
+</section>
+
+<section id="saanamed">
+  <div class="wrap">
+    <div class="saana">
+      <h2>SAANAMED es de casa</h2>
+      <p>SAANAMED es la empresa chica de la familia. Nació de ENDOFAJ Medical y la atendemos las mismas personas, con el mismo taller y la misma garantía.</p>
+      <p>Si nos conociste como SAANAMED, llegaste al lugar correcto: puedes cotizar y comprar con cualquiera de los dos nombres.</p>
+      <a class="btn btn-line" data-wa="Hola, los contacto por SAANAMED y quisiera una cotización.">Cotizar con SAANAMED</a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <h2>Contacto</h2>
+    <div class="people" id="people"></div>
+    <div class="datos">
+      <div><b>Oficina</b>Fernando Amilpa #47<br>U. CTM Atzacoalco, CDMX<br>Lunes a viernes, 9 a 18 h</div>
+      <div><b>Teléfonos</b>55 5769 7811<br>55 5714 2594</div>
+      <div><b>Correo</b><a href="mailto:endofaj@hotmail.com">endofaj@hotmail.com</a><br><a href="mailto:ventas@endofaj.mx">ventas@endofaj.mx</a></div>
+      <div><b>Redes</b><a href="https://www.facebook.com/profile.php?id=100088974687668" target="_blank" rel="noopener">Facebook</a><br><a href="https://www.linkedin.com/company/endofaj-medical/" target="_blank" rel="noopener">LinkedIn</a><br><a href="https://instagram.com/endofajmedicaloficial" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>ENDOFAJ Medical S.A. de C.V.</b> · SAANAMED</span>
+    <span>Fernando Amilpa #47, U. CTM Atzacoalco, CDMX · 55 5769 7811</span>
+  </div>
+</footer>
+
+<a class="fab" data-wa="Hola, quisiera una cotización." aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C8.800 3 3 8.800 3 16c0 2.300.600 4.500 1.700 6.400L3 29l6.800-1.700c1.900 1 4 1.600 6.200 1.600 7.200 0 13-5.800 13-13S23.200 3 16 3zm0 23.600c-2 0-3.900-.500-5.600-1.500l-.4-.200-4 1 1.100-3.900-.300-.400C5.700 20 5.200 18 5.200 16 5.200 10 10 5.200 16 5.200S26.800 10 26.800 16 22 26.600 16 26.600zm5.900-7.900c-.300-.200-1.900-.900-2.200-1-.300-.100-.500-.200-.700.200-.200.300-.800 1-1 1.200-.200.200-.400.200-.700.100-1.900-1-3.200-1.700-4.400-3.900-.300-.600.300-.500.900-1.700.100-.200 0-.400 0-.600-.100-.200-.700-1.800-1-2.400-.300-.600-.500-.500-.700-.500h-.600c-.200 0-.600.100-.900.400-.300.300-1.100 1.100-1.100 2.700s1.200 3.200 1.300 3.400c.200.200 2.300 3.500 5.600 4.900 2.100.900 2.900 1 3.900.800.600-.100 1.900-.800 2.200-1.500.300-.800.300-1.400.200-1.500-.100-.200-.300-.300-.600-.400z"/></svg>
+</a>
+
+<dialog id="lightbox"><button aria-label="Cerrar">×</button><img alt=""></dialog>
+
+<script>
+// ====== DATOS EDITABLES ======
+const WHATSAPP = "525511424433"; // número principal (55 1142 44 33)
+
+// Vendedores: reemplazar nombre, puesto, empresa y teléfono (52 + 10 dígitos).
+const VENDEDORES = [
+  { nombre: "Nombre del vendedor 1", puesto: "Ventas", empresa: "ENDOFAJ Medical", tel: "525511424433" },
+  { nombre: "Nombre del vendedor 2", puesto: "Ventas", empresa: "SAANAMED",        tel: "525511424433" },
+  { nombre: "Nombre del vendedor 3", puesto: "Ventas", empresa: "ENDOFAJ Medical", tel: "525511424433" },
+];
+
+const PRODUCTOS = [
+  { img:"amt-2000", cat:"Carros", modelo:"AMT 2000", nombre:"Carro porta equipo",
+    car:["Cajón para instrumental con chapa","Cuatro entrepaños ajustables","Puerta de acrílico de 6 mm y puerta trasera de lámina perforada","Porta tanque a la medida"],
+    specs:["136 × 65 × 68 cm (H × L × A)","Soporte para monitor con base giratoria"] },
+  { img:"amt-2020", cat:"Carros", modelo:"AMT 2020", nombre:"Carro porta equipo",
+    car:["Dos entrepaños fijos y uno corredizo","Cajón para instrumental con llave","Puerta de acrílico de 6 mm con chapa bancaria","Porta tanques a la medida"],
+    specs:["130 × 65 × 58 cm (H × L × A)","EP 18 cm","Soporte para monitor con base giratoria"] },
+  { img:"endopro", cat:"Carros", modelo:"ENDOPRO", nombre:"Carro compacto porta equipo",
+    car:["Tres entrepaños fijos","Cajón deslizable para instrumental","Puerta delantera de acrílico de 6 mm","Puerta trasera de lámina perforada y porta tanque a la medida"],
+    specs:["110 × 56 × 56 cm (H × L × A)","Soporte para monitor con base giratoria"] },
+  { img:"amt-520", cat:"Carros", modelo:"AMT 520", nombre:"Carro porta equipo",
+    car:["Repisa deslizable para instrumental","Cuatro entrepaños fijos"],
+    specs:["110 × 50 × 50 cm (H × L × A)","EP 18 cm","Soporte para monitor con base giratoria"] },
+  { img:"desarmable-cc", cat:"Carros", modelo:"Desarmable C/C", nombre:"Carro porta equipo desarmable con cajón",
+    car:["Cajón deslizable para instrumental (chico o grande)","Tres entrepaños","Porta tanque"],
+    specs:["178 × 45 × 47 cm (H × L × A)","EP 18 cm","Soporte para monitor plano"] },
+  { img:"ma-ec", cat:"Carros", modelo:"MA-EC", nombre:"Carro porta equipo",
+    car:["Soporte para equipo de electrocoagulación"],
+    specs:["81 × 48 × 47 cm (H × L × A)","Soporte para monitor con base giratoria"] },
+  { img:"eta", cat:"Carros", modelo:"ETA", nombre:"Mesa porta equipo",
+    car:["Tres entrepaños fijos"],
+    specs:["92 × 50 × 45 cm (H × L × A)","Soporte para monitor con base giratoria"] },
+  { img:"desarmable-sc", cat:"Pedestales", modelo:"Desarmable S/C", nombre:"Pedestal porta equipo con repisas",
+    car:["PTR 3 × 1/2\" y placa de 3/8\"","Cuatro repisas"],
+    specs:["Altura 177 cm","Charola 40 × 37 cm","Soporte para monitor con base giratoria"] },
+  { img:"x-160", cat:"Pedestales", modelo:"X-160", nombre:"Pedestal porta monitor",
+    car:["PTR 3 × 1/2\" y placa de 3/8\"","Soporte para monitor de hasta 15 kg con pasacables","Jaladera al costado o trasera; opción desmontable y/o plegable"],
+    specs:["178 × 50 × 50 cm (H × L × A)"] },
+  { img:"brazo-7500", cat:"Accesorios", modelo:"7500", nombre:"Brazo neumático grande",
+    car:["Ajuste de altura 18\" y extensión 27\"","Inclinación 200°, rotación 360°","Color blanco"],
+    specs:["Pantalla hasta 43\"","Carga máxima 20 kg","VESA 100 mm"] },
+  { img:"cpmg", cat:"Accesorios", modelo:"CPMG", nombre:"Clip para monitor",
+    car:["Acero de alta resistencia","Acabado en polvo anticorrosivo","Negro, blanco o azul"],
+    specs:["Pantalla hasta 32\"","Carga máxima 30 kg","VESA 100×100 y 200×200"] },
+  { img:"cpmc", cat:"Accesorios", modelo:"CPMC", nombre:"Clip para monitor",
+    car:["Ajuste de altura 6.25\"","Acero de alta resistencia, negro mate"],
+    specs:["Pantalla hasta 24\"","Carga máxima 10 kg","VESA 75×75 y 100×100"] },
+  { img:"porta-endoscopios", cat:"Accesorios", modelo:"Porta endoscopios", nombre:"Soporte para endoscopios flexibles",
+    car:["Se monta en el carro porta equipo","Varilla de aluminio con sistema telescópico"],
+    specs:["Peso aprox. 0.25 kg"] },
+];
+// ====== FIN DE DATOS ======
+
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+const wa = (msg, tel = WHATSAPP) => `https://wa.me/${tel}?text=${encodeURIComponent(msg)}`;
+
+document.querySelectorAll("[data-wa]").forEach(a => { a.href = wa(a.dataset.wa); a.target = "_blank"; a.rel = "noopener"; });
+
+const grid = document.getElementById("grid");
+function render(cat) {
+  grid.innerHTML = PRODUCTOS.filter(p => cat === "Todos" || p.cat === cat).map(p => `
+    <article class="card">
+      <button class="thumb" data-full="img/${p.img}.jpg" aria-label="Ver ficha de ${esc(p.modelo)}">
+        <img src="img/${p.img}.jpg" alt="Ficha técnica ${esc(p.modelo)}" loading="lazy" width="1600" height="900">
+      </button>
+      <div class="body">
+        <h3>${esc(p.modelo)}<small>${esc(p.nombre)}</small></h3>
+        <ul>${p.car.map(c => `<li>${esc(c)}</li>`).join("")}</ul>
+        <div class="specs">${p.specs.map(esc).join(" · ")}</div>
+        <div class="links">
+          <button data-full="img/${p.img}.jpg">Ver ficha</button>
+          <a class="btn btn-wa" target="_blank" rel="noopener" href="${wa(`Hola, quisiera cotizar el ${p.modelo} (${p.nombre}).`)}">Cotizar</a>
+        </div>
+      </div>
+    </article>`).join("");
+}
+
+const filters = document.getElementById("filters");
+["Todos", ...new Set(PRODUCTOS.map(p => p.cat))].forEach((c, i) => {
+  const b = document.createElement("button");
+  b.className = "tab"; b.textContent = c; b.setAttribute("aria-pressed", i === 0);
+  b.onclick = () => { filters.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x === b)); render(c); };
+  filters.append(b);
+});
+render("Todos");
+
+const box = document.getElementById("lightbox");
+grid.addEventListener("click", e => {
+  const t = e.target.closest("[data-full]"); if (!t) return;
+  box.querySelector("img").src = t.dataset.full;
+  box.showModal();
+});
+box.addEventListener("click", e => { if (e.target.tagName !== "IMG") box.close(); });
+
+const fmtTel = t => t.replace(/^52(\d{2})(\d{4})(\d{2})(\d{2})$/, "$1 $2 $3 $4");
+document.getElementById("people").innerHTML = VENDEDORES.map(v => `
+  <div class="person">
+    <h3>${esc(v.nombre)}</h3>
+    <p>${esc(v.puesto)} · ${esc(v.empresa)}</p>
+    <p class="tel">${fmtTel(v.tel)}</p>
+    <a class="btn btn-wa" target="_blank" rel="noopener" href="${wa("Hola, quisiera una cotización.", v.tel)}">Enviar WhatsApp</a>
+  </div>`).join("");
+</script>
+</body>
+</html>
